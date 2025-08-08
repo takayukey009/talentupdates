@@ -1,0 +1,35 @@
+{
+  "id": "yamada-hanako",
+  "name": "山田 花子",
+  "reading": "やまだ はなこ",
+  "note": "テスト用のサンプルタレント。",
+  "decided": [
+    {
+      "title": "10月期ドラマ レギュラー",
+      "role": "レギュラー出演",
+      "date": "2025-10",
+      "period": "2025年10月〜12月",
+      "release": "地上波",
+      "note": "詳細未公表"
+    }
+  ],
+  "auditions": {
+    "passed": ["CM(化粧品)二次通過"],
+    "inProgress": ["映画ヒロイン最終"],
+    "rejected": ["舞台ゲスト(一次)"]
+  },
+  "lessons": ["演技", "ダンス", "ボイトレ"],
+  "snsProgress": ["Instagram 1.2万", "TikTok 8,500"],
+  "recentUpdates": ["雑誌インタビュー掲載", "イベント登壇"]
+  ,
+  "awaitingRelease": [
+    {
+      "title": "スキンケアCM",
+      "role": "出演",
+      "platform": "TV/YouTube",
+      "expectedRelease": "2025-09",
+      "date": "2025-08-20",
+      "note": "撮影済み"
+    }
+  ]
+}
