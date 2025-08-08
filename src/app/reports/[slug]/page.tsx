@@ -13,7 +13,7 @@ export default async function ReportDetailPage(props: Props) {
   let report;
   try {
     report = await getReportBySlug(slug);
-  } catch (e) {
+  } catch {
     return notFound();
   }
 

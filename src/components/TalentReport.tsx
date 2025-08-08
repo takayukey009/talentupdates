@@ -2,20 +2,46 @@
 
 import { useState } from "react";
 
-type AnyTalent = {
+export type DecidedItem = {
+  title?: string;
+  role?: string;
+  period?: string;
+  date?: string;
+  release?: string;
+  note?: string;
+};
+
+export type AwaitingReleaseItem = {
+  title?: string;
+  role?: string;
+  platform?: string;
+  expectedRelease?: string;
+  date?: string;
+  note?: string;
+};
+
+export type Auditions = {
+  passed?: string[];
+  inProgress?: string[];
+  rejected?: string[];
+};
+
+export type UITalent = {
   id: string;
   name?: string;
   reading?: string;
   note?: string;
-  decided?: Array<any>;
-  auditions?: { passed?: any[]; inProgress?: any[]; rejected?: any[] };
-  lessons?: any[];
-  snsProgress?: any[];
-  recentUpdates?: any[];
-  awaitingRelease?: any[];
+  decided?: DecidedItem[];
+  auditions?: Auditions;
+  lessons?: string[];
+  snsProgress?: string[];
+  recentUpdates?: string[];
+  awaitingRelease?: AwaitingReleaseItem[];
 };
 
-export default function TalentReport({ talents }: { talents: AnyTalent[] }) {
+export type TalentReportProps = { talents: UITalent[] };
+
+export default function TalentReport({ talents }: TalentReportProps) {
   const [active, setActive] = useState<string>(talents[0]?.id ?? "");
 
   return (
@@ -77,7 +103,7 @@ export default function TalentReport({ talents }: { talents: AnyTalent[] }) {
             {t.id !== "taniguchi" && !!t.decided?.length && (
               <Card title="決定案件" badge={t.decided.length} icon="📷" badgeTone="secondary">
                 <ul className="space-y-3">
-                  {t.decided.map((d: any, i: number) => (
+                  {t.decided.map((d: DecidedItem, i: number) => (
                     <li key={i} className="border-l-4 border-green-500 pl-4 space-y-1">
                       <div className="font-semibold text-sm">{d.title}</div>
                       <Meta label="役名" value={d.role} />
@@ -95,7 +121,7 @@ export default function TalentReport({ talents }: { talents: AnyTalent[] }) {
             {!!t.awaitingRelease?.length && (
               <Card title="公開待ち" badge={t.awaitingRelease.length} icon="⏳" badgeTone="secondary">
                 <ul className="space-y-3">
-                  {t.awaitingRelease.map((a: any, i: number) => (
+                  {t.awaitingRelease.map((a: AwaitingReleaseItem, i: number) => (
                     <li key={i} className="border-l-4 border-purple-500 pl-4 space-y-1">
                       <div className="font-semibold text-sm">{a.title}</div>
                       <Meta label="役名" value={a.role} />
@@ -115,7 +141,7 @@ export default function TalentReport({ talents }: { talents: AnyTalent[] }) {
                 {!!t.auditions?.passed?.length && (
                   <AccordionItem title={`合格 (${t.auditions.passed.length})`}>
                     <ul className="space-y-1">
-                      {t.auditions.passed.map((x: any, i: number) => (
+                      {t.auditions.passed.map((x: string, i: number) => (
                         <li key={i} className="text-sm text-blue-700">• {String(x)}</li>
                       ))}
                     </ul>
@@ -125,7 +151,7 @@ export default function TalentReport({ talents }: { talents: AnyTalent[] }) {
                 {!!t.auditions?.inProgress?.length && (
                   <AccordionItem title={`進行中 (${t.auditions.inProgress.length})`}>
                     <ul className="space-y-1">
-                      {t.auditions.inProgress.map((x: any, i: number) => (
+                      {t.auditions.inProgress.map((x: string, i: number) => (
                         <li key={i} className="text-sm text-yellow-700">• {String(x)}</li>
                       ))}
                     </ul>
@@ -135,7 +161,7 @@ export default function TalentReport({ talents }: { talents: AnyTalent[] }) {
                 {!!t.auditions?.rejected?.length && (
                   <AccordionItem title={`見送り・辞退 (${t.auditions.rejected.length})`}>
                     <ul className="space-y-1">
-                      {t.auditions.rejected.map((x: any, i: number) => (
+                      {t.auditions.rejected.map((x: string, i: number) => (
                         <li key={i} className="text-sm text-red-700">• {String(x)}</li>
                       ))}
                     </ul>
@@ -149,7 +175,7 @@ export default function TalentReport({ talents }: { talents: AnyTalent[] }) {
           {!!t.lessons?.length && (
             <Card title="レッスン・ワークショップ" icon="🎤">
               <ul className="space-y-2">
-                {t.lessons.map((l: any, i: number) => (
+                {t.lessons.map((l: string, i: number) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 inline-block" />
                     <span className="text-sm">{String(l)}</span>
@@ -163,7 +189,7 @@ export default function TalentReport({ talents }: { talents: AnyTalent[] }) {
           {!!t.snsProgress?.length && (
             <Card title="SNS進捗" icon="👥">
               <ul className="space-y-2">
-                {t.snsProgress.map((s: any, i: number) => (
+                {t.snsProgress.map((s: string, i: number) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="w-2 h-2 bg-pink-500 rounded-full mt-2 inline-block" />
                     <span className="text-sm">{String(s)}</span>
