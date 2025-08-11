@@ -2,7 +2,9 @@ import { config, collection, fields } from '@keystatic/core';
 
 export default config({
   storage: {
-    kind: 'local',
+    kind: 'github',
+    // Commits edits directly to your GitHub repository
+    repo: { owner: 'takayukey009', name: 'talentupdates' },
   },
   ui: {
     brand: {
