@@ -12,12 +12,16 @@ export async function getTalents(): Promise<TalentItem[]> {
   const reader = createReader(process.cwd(), config);
   const items = await reader.collections.talents.all();
   // items: Array<{ slug: string; entry: Record<string, any> }>
-  return items.map(({ slug, entry }) => ({ id: slug, ...entry })) as TalentItem[];
+  return items.map(({ slug, entry }) => {
+    const { id: _ignored, ...rest } = (entry ?? {}) as Record<string, unknown>;
+    return { id: slug, ...rest } as TalentItem;
+  });
 }
 
 export async function getTalentById(id: string): Promise<TalentItem | null> {
   const reader = createReader(process.cwd(), config);
   const item = await reader.collections.talents.read(id);
   if (!item) return null;
-  return { id, ...item } as TalentItem;
+  const { id: _ignored, ...rest } = (item ?? {}) as Record<string, unknown>;
+  return { id, ...rest } as TalentItem;
 }
