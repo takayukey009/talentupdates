@@ -247,7 +247,7 @@ function Card({ title, children, badge, icon, badgeTone = "default" }: { title: 
   );
 }
 
-function Meta({ label, value }: { label: string; value?: any }) {
+function Meta({ label, value }: { label: string; value?: string | number | boolean }) {
   if (!value) return null;
   return <div className="text-xs text-gray-600">{label}: {String(value)}</div>;
 }
