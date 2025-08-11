@@ -45,11 +45,11 @@ export default function TalentReport({ talents }: TalentReportProps) {
   const [active, setActive] = useState<string>(talents[0]?.id ?? "");
 
   return (
-    <div className="max-w-7xl mx-auto p-6 space-y-6">
+    <div className="max-w-7xl mx-auto p-6 space-y-6 min-h-screen bg-neutral-50 text-slate-900">
       {/* Header */}
       <div className="text-center space-y-2">
         <h1 className="text-3xl font-bold">タレント近況報告</h1>
-        <p className="text-gray-500">{talents.length}名のタレント活動状況まとめ</p>
+        <p className="text-slate-600">{talents.length}名のタレント活動状況まとめ</p>
       </div>
 
       {/* Tabs header */}
@@ -59,7 +59,9 @@ export default function TalentReport({ talents }: TalentReportProps) {
             key={t.id}
             onClick={() => setActive(t.id)}
             className={`text-xs rounded border px-2 py-1 transition ${
-              active === t.id ? "bg-black text-white" : "bg-white hover:bg-gray-50"
+              active === t.id
+                ? "bg-blue-600 text-white border-blue-600"
+                : "bg-white hover:bg-gray-100 text-slate-800 border-gray-200"
             }`}
           >
             {(t.name || t.id).toString().split(" ")[0]}
@@ -80,7 +82,7 @@ export default function TalentReport({ talents }: TalentReportProps) {
                   <span className="text-sm text-gray-500">（{t.reading}）</span>
                 ) : null}
               </div>
-              {t.note ? <p className="text-sm text-gray-500 mt-1">{t.note}</p> : null}
+              {t.note ? <p className="text-sm text-slate-600 mt-1">{t.note}</p> : null}
             </div>
           </div>
 
