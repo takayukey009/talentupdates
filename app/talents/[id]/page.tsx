@@ -4,6 +4,8 @@ import { getTalentById, getTalents } from '@/lib/data';
 import Link from 'next/link';
 import TalentDetailList from './TalentDetailList';
 
+export const dynamic = 'force-dynamic';
+
 export default async function TalentDetail({ params }: { params: Promise<{ id: string }> }) {
     const { id: rawId } = await params;
     const id = decodeURIComponent(rawId);
