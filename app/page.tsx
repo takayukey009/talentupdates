@@ -1,66 +1,104 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import React from 'react';
+import styles from './page.module.css';
+import { getTalents } from '@/lib/data';
+import Link from 'next/link';
 
-export default function Home() {
+export const dynamic = 'force-dynamic';
+
+// Server Component
+export default async function Home() {
+  const talents = await getTalents();
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className={styles.main}>
+      <aside className={styles.sidebar}>
+        <div className={styles.logo}>STARBOARD</div>
+        <nav className={styles.nav}>
+          <div className={`${styles.navItem} ${styles.active}`}>Dashboard</div>
+          <div className={styles.navItem}>Talents</div>
+          <div className={styles.navItem}>Auditions</div>
+          <div className={styles.navItem}>Settings</div>
+        </nav>
+      </aside>
+
+      <div className={styles.content}>
+        <header className={styles.header}>
+          <h1 className={styles.pageTitle}>Dashboard Overview</h1>
+          <div className={styles.userProfile}>Manager</div>
+        </header>
+
+        <section>
+          <div className={styles.dashboardGrid}>
+            {talents.map(talent => {
+              // Calculate Stats
+              // Requested categories: Drama, Movie, Commercial (広告), Stage (舞台), Other (その他)
+              const categories = ['Drama', 'Movie', 'Commercial', 'Stage', 'Other'];
+              const stats = categories.map(cat => {
+                // @ts-ignore
+                const total = talent.auditions.filter(a => a.category === cat && (a.status === 'Won' || a.status === 'Lost')).length;
+                // @ts-ignore
+                const won = talent.auditions.filter(a => a.category === cat && a.status === 'Won').length;
+                const rate = total > 0 ? Math.round((won / total) * 100) : 0;
+                return { cat, total, won, rate };
+              });
+
+              return (
+                <div key={talent.id} className={`${styles.talentCard} glass-panel`}>
+                  <div className={styles.cardHeader} style={{ borderBottom: 'none', paddingBottom: '0.5rem' }}>
+                    <div className={styles.avatar} style={{ backgroundColor: talent.avatarUrl }}>
+                      {talent.name.charAt(0)}
+                    </div>
+                    <div className={styles.talentInfo}>
+                      <Link
+                        href={`/talents/${talent.id}`}
+                        className={styles.talentName}
+                        style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}
+                      >
+                        {talent.name} <span style={{ fontSize: '0.8rem', opacity: 0.7, fontWeight: 'normal' }}>↗</span>
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Summary Stats Grid */}
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginTop: '1rem' }}>
+                    {stats.map(s => {
+                      const hasData = s.total > 0;
+                      return (
+                        <div key={s.cat} style={{
+                          padding: '0.75rem',
+                          background: hasData ? 'rgba(0,0,0,0.3)' : 'rgba(0,0,0,0.1)',
+                          borderRadius: '8px',
+                          opacity: hasData ? 1 : 0.5
+                        }}>
+                          <div style={{ fontSize: '0.7rem', color: '#94a3b8', marginBottom: '4px' }}>{s.cat}</div>
+                          <div style={{ display: 'flex', alignItems: 'flex-end', gap: '6px' }}>
+                            <span style={{ fontSize: '1.25rem', fontWeight: 'bold', color: hasData ? 'var(--accent-cyan)' : '#64748b' }}>{s.rate}%</span>
+                            <span style={{ fontSize: '0.8rem', color: '#64748b' }}>{s.won}/{s.total}</span>
+                          </div>
+                        </div>
+                      )
+                    })}
+                  </div>
+
+                  <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
+                    <Link href={`/talents/${talent.id}`} style={{
+                      display: 'inline-block',
+                      padding: '0.5rem 1.5rem',
+                      fontSize: '0.9rem',
+                      color: '#fff',
+                      border: '1px solid rgba(255,255,255,0.2)',
+                      borderRadius: '20px',
+                      transition: 'all 0.2s'
+                    }}>
+                      View Details
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      </div>
+    </main>
   );
 }

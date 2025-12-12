@@ -1,0 +1,1175 @@
+[
+  {
+    "id": "t_谷口彩菜",
+    "name": "谷口彩菜",
+    "avatarUrl": "#f472b6",
+    "auditions": [
+      {
+        "id": "a_0",
+        "projectTitle": "「声色犬馬」日本版",
+        "category": "Variety",
+        "status": "Won",
+        "date": "12/16(月)15:00",
+        "isArchived": true,
+        "notes": "書類通過"
+      },
+      {
+        "id": "a_1",
+        "projectTitle": "UberEatsのCM",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "1/22-1/24",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_2",
+        "projectTitle": "佐賀県PR動画",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "3月",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_3",
+        "projectTitle": "コカコーラ　麦茶",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "1/30",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_4",
+        "projectTitle": "EX4月クールドラマ「特捜９」①",
+        "category": "Drama",
+        "status": "Lost",
+        "date": "ー",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_5",
+        "projectTitle": "JT の広告",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "2/7",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_6",
+        "projectTitle": "「N-BOX」",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "2月12日",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_7",
+        "projectTitle": "求人サイトE",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "2/13",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_8",
+        "projectTitle": "〈萱野組〉2026年劇場公開長編映画オーディション",
+        "category": "Movie",
+        "status": "Lost",
+        "date": "2/13",
+        "isArchived": true,
+        "notes": "２次選考落選"
+      },
+      {
+        "id": "a_9",
+        "projectTitle": "ラブキャッチャー",
+        "category": "Variety",
+        "status": "Won",
+        "date": "2/16",
+        "isArchived": true,
+        "notes": "最終（４次）合格"
+      },
+      {
+        "id": "a_10",
+        "projectTitle": "シューイチ（土曜日）オーディション",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "１７日または１９日",
+        "isArchived": true,
+        "notes": "書類通過・２次落選"
+      },
+      {
+        "id": "a_11",
+        "projectTitle": "福島県南相馬市のPR動画オーディション",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "3/4-3/7のどこか",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_12",
+        "projectTitle": "乳製品企画チューブバターの広告オーディション",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "2/28(金)",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_13",
+        "projectTitle": "LINEミニアプリWEBCM",
+        "category": "Commercial",
+        "status": "Won",
+        "date": "3/6(木)午前中〜夜目まで終日予定",
+        "isArchived": true,
+        "notes": "共通メイン的キャスト、テレビCM含む。放送6月～7月予定\r\n【媒体】TVCM+web全般（youtube、SNS、HP静止画GR含む）\r\n【使用期間】2025.4/確認中～1年間\r\n  ※4月中の開始予定ですが、現状、TV媒体に確認中ですので追ってお知らせします。\r\n【競合】なし"
+      },
+      {
+        "id": "a_14",
+        "projectTitle": "「ワケあり彼女は逃走中」→ドS社長からは逃げられない",
+        "category": "Variety",
+        "status": "Won",
+        "date": "5月27日～6月3日",
+        "isArchived": true,
+        "notes": "神崎エリカ役（桜庭 千尋の敵役）"
+      },
+      {
+        "id": "a_15",
+        "projectTitle": "シャークニンジャ広告",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "5/11-12",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_16",
+        "projectTitle": "芸能ウラオモテch",
+        "category": "Variety",
+        "status": "Won",
+        "date": "書類のみ",
+        "isArchived": true,
+        "notes": "進行役"
+      },
+      {
+        "id": "a_17",
+        "projectTitle": "第0期東京スーパーリーグ・実況",
+        "category": "Variety",
+        "status": "Pending",
+        "date": "-",
+        "isArchived": false,
+        "notes": "GATE30％　5.24～6/29の計6回・ポーカー"
+      },
+      {
+        "id": "a_18",
+        "projectTitle": "ユニフルーティ",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "5/11-12",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_19",
+        "projectTitle": "スシロー",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "5/19",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_20",
+        "projectTitle": "BAMBI WATERシリーズ（ラングレー）",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "ー",
+        "isArchived": true,
+        "notes": "二次利用：有（公式HP、SNS、プレスリリース等）※範囲・期間は要相談"
+      },
+      {
+        "id": "a_21",
+        "projectTitle": "ハウスウェルネスフーズ（C1000ビタミン）",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "5/21",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_22",
+        "projectTitle": "映画「キリコのタクト～YELL～」",
+        "category": "Movie",
+        "status": "Pending",
+        "date": "6/21",
+        "isArchived": false,
+        "notes": ""
+      },
+      {
+        "id": "a_23",
+        "projectTitle": "ローソン",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "6/4",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_24",
+        "projectTitle": "社長と嘘のシンデレラ",
+        "category": "Variety",
+        "status": "Won",
+        "date": "ー",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_25",
+        "projectTitle": "BUMP　声優ロマンシス/ラウンジ嬢",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "6/7",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_26",
+        "projectTitle": "showdown",
+        "category": "Variety",
+        "status": "Won",
+        "date": "-",
+        "isArchived": true,
+        "notes": "相手役が決まれば、岡田紗佳さん"
+      },
+      {
+        "id": "a_27",
+        "projectTitle": "小説原作縦型ショートドラマ「心恋~uragoi~」メインキャスト募集",
+        "category": "Drama",
+        "status": "Won",
+        "date": "1次審査(書類選考): 6月14日まで 、2次審査(演技審査): 6月17日予定",
+        "isArchived": true,
+        "notes": "ヒロイン役 (18歳〜20代女性) で決定。参考　ヒロインのライバル役 (20代〜30代女性) ※嫌な演技ができる方 、ヤクザの若頭の付き人 (30代〜40代) ※落ち着きのある方   その他: 濡れ場はないが、際どいお芝居をお願いする場合あり 、事前稽古あり   ギャランティー: メインキャスト 報酬10万円〜(税別)、交通費支給(上限要相談)   "
+      },
+      {
+        "id": "a_28",
+        "projectTitle": "某男性シンガーソングライターLIVEツアーグッズ広告モデル募集‼",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "6月18日(水)",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_29",
+        "projectTitle": "石崎ひゅーいさんMV",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "6/24",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_30",
+        "projectTitle": "UHA味覚糖・マーピーPR投稿",
+        "category": "Commercial",
+        "status": "Won",
+        "date": "TBD",
+        "isArchived": true,
+        "notes": "7/7までに下書き提出"
+      },
+      {
+        "id": "a_31",
+        "projectTitle": "東京彼女",
+        "category": "Variety",
+        "status": "Pending",
+        "date": "7/9",
+        "isArchived": false,
+        "notes": ""
+      },
+      {
+        "id": "a_32",
+        "projectTitle": "短編映画",
+        "category": "Movie",
+        "status": "Lost",
+        "date": "7/24or7/29",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_33",
+        "projectTitle": "\r\n三井ダイレクト損害保険株式会社",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "書類のみ",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_34",
+        "projectTitle": "USJ",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "7/9",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_35",
+        "projectTitle": "メルカード",
+        "category": "Variety",
+        "status": "Won",
+        "date": "7/17",
+        "isArchived": true,
+        "notes": "7/27はスケジュールNG"
+      },
+      {
+        "id": "a_36",
+        "projectTitle": "ニベアクリーム×ごっこ倶楽部",
+        "category": "Variety",
+        "status": "Won",
+        "date": "7/28",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_37",
+        "projectTitle": "エモハル",
+        "category": "Variety",
+        "status": "Won",
+        "date": "8/1",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_38",
+        "projectTitle": "「仮面ライダーゼッツ」",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "なし",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_39",
+        "projectTitle": "NTT google pixel",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "7/25",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_40",
+        "projectTitle": "SUUMO",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "なし",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_41",
+        "projectTitle": "OVQ株式会社",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "なし",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "a_42",
+        "projectTitle": "ローソン　マチカフェ",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "映像選考のみ",
+        "isArchived": true,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "id": "t_吉富千桜",
+    "name": "吉富千桜",
+    "avatarUrl": "#a78bfa",
+    "auditions": [
+      {
+        "id": "y_0",
+        "projectTitle": "『NEW GROUP(仮)』オリジナル長編映画",
+        "category": "Movie",
+        "status": "Lost",
+        "date": "10/12,13@角川大映スタジオ(調布)",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_1",
+        "projectTitle": "CX2025年1月火21時ドラマ",
+        "category": "Drama",
+        "status": "Lost",
+        "date": "10/21",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_2",
+        "projectTitle": "KDDI au三太郎",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "11/7,8",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_3",
+        "projectTitle": "パトレイバー",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "未定",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_4",
+        "projectTitle": "楽映舎　WOWOW",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "11/7,11",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_5",
+        "projectTitle": "株式会社AQ Group　広告案件",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "11月15日場所調整中",
+        "isArchived": true,
+        "notes": "なし\r\n▶︎契約中案件競合懸念【住宅・不動産関連等】があれば詳細を伺わせてください。"
+      },
+      {
+        "id": "y_6",
+        "projectTitle": "あれくん　MV",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "11/21,11/22",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_7",
+        "projectTitle": "資生堂",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "4/8",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_8",
+        "projectTitle": "曽根隼人監督・商業映画デビュー作品『ガチャ_廻世界（かんせかい）』",
+        "category": "Movie",
+        "status": "Lost",
+        "date": "4/26・4/27",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_9",
+        "projectTitle": "キリンビバレッジ株式会社",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "5/2",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_10",
+        "projectTitle": "ユニフルーティ",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "5/11-12",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_11",
+        "projectTitle": "ルームウェアアパレル ハーフ/日本人・子役モデル募集 / Root Division",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "6/16",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_12",
+        "projectTitle": "映画「キリコのタクト～YELL～」",
+        "category": "Movie",
+        "status": "Lost",
+        "date": "6/21",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_13",
+        "projectTitle": "ローソン",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "6/4",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_14",
+        "projectTitle": "恥辱の教室 (縦型ショートドラマ)",
+        "category": "Drama",
+        "status": "Lost",
+        "date": "一次選考: 書類・動画選考、最終選考: オーディション (6月15日と6月18日で調整中)",
+        "isArchived": true,
+        "notes": "作品概要: 全60話前後 (1話あたり1〜2分)、全体で約100分。ジャンル: ラブロマンス、TL。テーマ: 恋愛、人間ドラマ、TL。配信プラットフォーム: Teller Drama (2025年9-10月以降配信予定)。契約形態: 買い切り (国内外の利用範囲および期限は無制限)。著作権: 株式会社テラーノベルに帰属。  募集役柄と報酬 (撮影9日): かなで (主人公・国語教諭) 25万円(税別)、鷹司瑞希 (ヒーロー・数学教師) 25万円(税別)、伊藤アンナ (ヴィラン・職場の御局教諭) 20万円(税別)、九条まぁや (ヴィラン・政治家の娘・鷹司の許嫁) 20万円(税別)、影浦貴志 (保健室の先生・サイコパス) 20万円(税別)。  撮影場所: 千葉県富津市。  インティマシーシーンについて: 一部インティマシーシーンが含まれるが、俳優の安全と安心を確保し、インティマシーコーディネーターをスタッフィング。撮影前に詳細内容と表現方法について合意形成を行い、必要に応じてリハーサルや個別の相談時間を設ける。  交通費・宿泊費: 実費支給。 衣装・メイク: 制作側で準備。"
+      },
+      {
+        "id": "y_15",
+        "projectTitle": "音楽配信サービズ",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "6/19",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_16",
+        "projectTitle": "マクドナルド",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "7/3",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_17",
+        "projectTitle": "東京彼女",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "7/9",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_18",
+        "projectTitle": "短編映画",
+        "category": "Movie",
+        "status": "Lost",
+        "date": "7/15-7/31",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_19",
+        "projectTitle": "\r\n三井ダイレクト損害保険株式会社",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "書類のみ",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_20",
+        "projectTitle": "USJ",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "7/9",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_21",
+        "projectTitle": "スターバックスWEBムービー",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "7/16",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_22",
+        "projectTitle": "大手鉄道会社・カード",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "7/17",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_23",
+        "projectTitle": "メルカード",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "7/17",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_24",
+        "projectTitle": "NETFLIXドラマ",
+        "category": "Drama",
+        "status": "Lost",
+        "date": "8/21,22",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_25",
+        "projectTitle": "門脇監督アニメーション作品",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "8/28-8/31",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_26",
+        "projectTitle": "任天堂",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "10/1",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "y_27",
+        "projectTitle": "TXドラマ　アイウェア1社提供",
+        "category": "Drama",
+        "status": "Pending",
+        "date": "未定",
+        "isArchived": false,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "id": "t_中塚智",
+    "name": "中塚智",
+    "avatarUrl": "#60a5fa",
+    "auditions": [
+      {
+        "id": "n_0",
+        "projectTitle": "Prime配信ドラマ",
+        "category": "Drama",
+        "status": "Lost",
+        "date": "調整中",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_1",
+        "projectTitle": "FANY縦型ドラマ",
+        "category": "Drama",
+        "status": "Lost",
+        "date": "9/21",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_2",
+        "projectTitle": "空気清浄機　トゥーコネクト",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "9/19（木）12:00-",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_3",
+        "projectTitle": "ミュージカル\r\n「ブルーサンタクロース」",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "9/20",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_4",
+        "projectTitle": "e-spirit T-ONE",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "9/25",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_5",
+        "projectTitle": "MBSドラマ",
+        "category": "Drama",
+        "status": "Lost",
+        "date": "未定",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_6",
+        "projectTitle": "Amazon Music",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "10/2",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_7",
+        "projectTitle": "東洋水産",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "TBD",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_8",
+        "projectTitle": "セブンイレブンうれしい値",
+        "category": "Variety",
+        "status": "Won",
+        "date": "なし",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_9",
+        "projectTitle": "「ゴーストオブウエノ」",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "10/7-9",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_10",
+        "projectTitle": "DMM TV",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "10/7(月)11時頃〜赤坂周辺",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_11",
+        "projectTitle": "自治医科大学/ブランドムービー",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "10/18(金)",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_12",
+        "projectTitle": "日立ビルシステム",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "10/17",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_13",
+        "projectTitle": "TX2025年４月ドラマ",
+        "category": "Drama",
+        "status": "Lost",
+        "date": "未定",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_14",
+        "projectTitle": "イルミネーション広告",
+        "category": "Commercial",
+        "status": "Won",
+        "date": "未定",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_15",
+        "projectTitle": "楽映舎　WOWOW",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "11/7,11",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_16",
+        "projectTitle": "P生協企業　広告キャスト",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "11月7日＠ADK",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_17",
+        "projectTitle": "モンハン",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "未定",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_18",
+        "projectTitle": "2025年　仮面ライダー",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "未定",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_19",
+        "projectTitle": "TRA6",
+        "category": "Variety",
+        "status": "Pending",
+        "date": "2025年1月",
+        "isArchived": false,
+        "notes": ""
+      },
+      {
+        "id": "n_20",
+        "projectTitle": "2026年大河ドラマ「豊臣兄弟！」",
+        "category": "Drama",
+        "status": "Lost",
+        "date": "2025年1/7-11",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_21",
+        "projectTitle": "サッカードラマ",
+        "category": "Drama",
+        "status": "Lost",
+        "date": "12/11,12,13,16",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_22",
+        "projectTitle": "SHINRYO CM",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "12/19",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_23",
+        "projectTitle": "JINSカラー2025",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "なし",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_24",
+        "projectTitle": "ＺＩＰ！ファミリーオーディション",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "1月31日までに通過者は連絡あります。",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_25",
+        "projectTitle": "アサヒ　ミンティア",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "1/17",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_26",
+        "projectTitle": "全力坂",
+        "category": "Variety",
+        "status": "Pending",
+        "date": "動画",
+        "isArchived": false,
+        "notes": ""
+      },
+      {
+        "id": "n_27",
+        "projectTitle": "EX4月クールドラマ「特捜９」①",
+        "category": "Drama",
+        "status": "Lost",
+        "date": "ー",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_28",
+        "projectTitle": "今でも好きな人",
+        "category": "Variety",
+        "status": "Won",
+        "date": "ー",
+        "isArchived": true,
+        "notes": "▼展開先\r\n「ポテトピクチャーズ」が運営するYou Tube他各種SNS\r\n▼ご出演料金\r\n　10,000円(交通費込み)"
+      },
+      {
+        "id": "n_29",
+        "projectTitle": "レモンサワーCM",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "1/29",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_30",
+        "projectTitle": "大和証券G",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "2/5,2/8",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_31",
+        "projectTitle": "ピザーラTVCM",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "2/3(月)お昼ぐらいからを予定 ",
+        "isArchived": true,
+        "notes": "▼使用媒体\r\nTVCM含むオールムービー+web全般(youtube、SNS含む)"
+      },
+      {
+        "id": "n_32",
+        "projectTitle": "999.9（フォーナインズ）2025 SS",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "2/14",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_33",
+        "projectTitle": "クリニカアドバンテージハミガキTVCM",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "2/13(木)午後〜19:00頃",
+        "isArchived": true,
+        "notes": "\"使用期間：25.4.1~(予定)1年間\r\n予算：大人12万＋税　娘10万＋税\""
+      },
+      {
+        "id": "n_34",
+        "projectTitle": "『特捜９season8』　",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "なし",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_35",
+        "projectTitle": "オリーブオイルのCMのサブキャスト",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "2/21（金）2/24",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_36",
+        "projectTitle": "KDDIトビラ（未来のコンビニ）",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "3/5",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_37",
+        "projectTitle": "LINEミニアプリWEBCM",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "3/6(木)午前中〜夜目まで終日予定",
+        "isArchived": true,
+        "notes": "15万＋税"
+      },
+      {
+        "id": "n_38",
+        "projectTitle": "「にゃんこ大戦争」",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "3/13",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_39",
+        "projectTitle": "リクナビNEXT",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "3/11",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_40",
+        "projectTitle": "池田模範堂の「アセムヒEX」",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "3/14",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_41",
+        "projectTitle": "PIZZA‐LA クォーターシリーズ TVCM",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "3/16",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_42",
+        "projectTitle": "はなさく生命TikTokドラマシリーズ",
+        "category": "Drama",
+        "status": "Lost",
+        "date": "TBD",
+        "isArchived": true,
+        "notes": "競合あり(競合範囲：保険、銀行、郵便貯金、証券、クレジットカード会社）"
+      },
+      {
+        "id": "n_43",
+        "projectTitle": "30秒動画でジャッジ！絶対に売れそうグランプリ",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "TBD",
+        "isArchived": true,
+        "notes": "放送日時：2025年6月中の日曜午後帯（13:30～16:30の間）90分枠（関東ローカル）予定"
+      },
+      {
+        "id": "n_44",
+        "projectTitle": "ダイハツ｜タフト",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "-",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_45",
+        "projectTitle": "清水翔太さんMV撮影",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "4/2-/5",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_46",
+        "projectTitle": "宝くじ",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "4/21",
+        "isArchived": true,
+        "notes": "4/30-5/1"
+      },
+      {
+        "id": "n_47",
+        "projectTitle": "某化粧品メーカーI社TVCM",
+        "category": "Commercial",
+        "status": "Lost",
+        "date": "6/12-14",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_48",
+        "projectTitle": "スシロー",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "5/19",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_49",
+        "projectTitle": "メルカードゴールド",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "5/21-22",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_50",
+        "projectTitle": "映画「キリコのタクト～YELL～」",
+        "category": "Movie",
+        "status": "Lost",
+        "date": "6/21",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_51",
+        "projectTitle": "メーカーズマーク",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "6/3-4",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_52",
+        "projectTitle": "石崎ひゅーいさんMV",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "6/24",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_53",
+        "projectTitle": "東京彼女",
+        "category": "Variety",
+        "status": "Pending",
+        "date": "7/9",
+        "isArchived": false,
+        "notes": ""
+      },
+      {
+        "id": "n_54",
+        "projectTitle": "三井損害保険ダイレクト",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "なし",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_55",
+        "projectTitle": "任天堂",
+        "category": "Variety",
+        "status": "Lost",
+        "date": "10/1",
+        "isArchived": true,
+        "notes": ""
+      },
+      {
+        "id": "n_56",
+        "projectTitle": "TXドラマ　アイウェア1社提供",
+        "category": "Drama",
+        "status": "Pending",
+        "date": "未定",
+        "isArchived": false,
+        "notes": ""
+      }
+    ]
+  }
+]
