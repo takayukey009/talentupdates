@@ -1,5 +1,5 @@
 export type Status = 'Pending' | 'Document Screening' | 'Audition' | 'Hold' | 'Won' | 'Lost';
-export type Category = 'Movie' | 'Drama' | 'Commercial' | 'Variety' | 'Stage' | 'Music' | 'Other';
+export type Category = 'Movie' | 'Drama' | 'Commercial' | 'Variety' | 'Stage' | 'Music' | 'Event' | 'Other';
 
 export interface Audition {
     id: string;
