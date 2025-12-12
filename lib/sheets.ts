@@ -82,6 +82,7 @@ export async function fetchFromSheetsV2(): Promise<Talent[]> {
                     else if (colC.includes('ドラマ') || colC.includes('Drama')) category = 'Drama';
                     else if (colC.includes('CM') || colC.includes('広告') || colC.includes('MV') || colC.includes('PV')) category = 'Commercial';
                     else if (colC.includes('舞台') || colC.includes('Stage')) category = 'Stage';
+                    else if (colC.includes('音楽') || colC.includes('Music') || colC.includes('ライブ')) category = 'Music';
                     else category = 'Other';
                 } else {
                     // Fallback if Column C is truly empty, though user said "I adjusted all Column C"

@@ -31,8 +31,8 @@ export default async function Home() {
           <div className={styles.dashboardGrid}>
             {talents.map(talent => {
               // Calculate Stats
-              // Requested categories: Drama, Movie, Commercial (広告), Stage (舞台), Other (その他)
-              const categories = ['Drama', 'Movie', 'Commercial', 'Stage', 'Other'];
+              // Requested categories: Drama, Movie, Commercial (広告), Stage (舞台), Music (音楽), Other (その他)
+              const categories = ['Drama', 'Movie', 'Commercial', 'Stage', 'Music', 'Other'];
               const stats = categories.map(cat => {
                 // @ts-ignore
                 const total = talent.auditions.filter(a => a.category === cat && (a.status === 'Won' || a.status === 'Lost')).length;
