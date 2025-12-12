@@ -50,7 +50,6 @@ export default async function AuditionsPage() {
                             <table style={{ width: '100%', borderCollapse: 'collapse', color: '#e2e8f0' }}>
                                 <thead>
                                     <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.1)', textAlign: 'left' }}>
-                                        <th style={{ padding: '1rem', fontWeight: '500', color: '#94a3b8' }}>Date</th>
                                         <th style={{ padding: '1rem', fontWeight: '500', color: '#94a3b8' }}>Talent</th>
                                         <th style={{ padding: '1rem', fontWeight: '500', color: '#94a3b8' }}>Project</th>
                                         <th style={{ padding: '1rem', fontWeight: '500', color: '#94a3b8' }}>Client</th>
@@ -60,7 +59,6 @@ export default async function AuditionsPage() {
                                 <tbody>
                                     {wonAuditions.map((audition, index) => (
                                         <tr key={`${audition.id}-${index}`} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                                            <td style={{ padding: '1rem', fontSize: '0.9rem' }}>{audition.date}</td>
                                             <td style={{ padding: '1rem' }}>
                                                 <Link href={`/talents/${audition.talentId}`} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#fff', textDecoration: 'none' }}>
                                                     <span style={{ width: '24px', height: '24px', borderRadius: '50%', background: '#3b82f6', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.7rem' }}>

@@ -100,7 +100,7 @@ export default async function Home() {
                       borderRadius: '20px',
                       transition: 'all 0.2s'
                     }}>
-                      View Details
+                      進行中案件
                     </Link>
                   </div>
                 </div>
