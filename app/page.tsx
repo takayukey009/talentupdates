@@ -56,6 +56,9 @@ export default async function Home() {
                       >
                         {talent.name} <span style={{ fontSize: '0.8rem', opacity: 0.7, fontWeight: 'normal' }}>↗</span>
                       </Link>
+                      <div style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '0.25rem' }}>
+                        Total Projects: <span style={{ color: '#e2e8f0', fontWeight: 'bold' }}>{talent.auditions.length}</span>
+                      </div>
                     </div>
                   </div>
 
