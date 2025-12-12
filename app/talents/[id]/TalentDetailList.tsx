@@ -44,7 +44,12 @@ export default function TalentDetailList({ talent }: Props) {
                             </div>
                             <div className={styles.projectTitle}>
                                 {audition.projectTitle}
+                                {audition.client && <span style={{ fontSize: '0.8rem', color: '#64748b', marginLeft: '0.5rem', fontWeight: 'normal' }}>({audition.client})</span>}
                                 {audition.isArchived && <span className={styles.archiveBadge}>History</span>}
+                            </div>
+                            <div style={{ fontSize: '0.8rem', color: '#cbd5e1', marginBottom: '0.5rem', display: 'flex', gap: '1rem' }}>
+                                {audition.shootDate && <span>Shoot: {audition.shootDate}</span>}
+                                {audition.manager && <span>Manager: {audition.manager}</span>}
                             </div>
                             <div className={styles.statusBadge} style={{ borderColor: getStatusColor(audition.status), color: getStatusColor(audition.status) }}>
                                 <span className={styles.statusDot} style={{ backgroundColor: getStatusColor(audition.status) }}></span>

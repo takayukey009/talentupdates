@@ -7,7 +7,10 @@ export interface Audition {
     category: Category;
     role?: string;
     status: Status;
-    date?: string;
+    date?: string; // AD Date
+    shootDate?: string;
+    client?: string;
+    manager?: string;
     notes?: string;
     isArchived?: boolean;
 }

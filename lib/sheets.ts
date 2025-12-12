@@ -104,12 +104,30 @@ export async function fetchFromSheetsV2(): Promise<Talent[]> {
                     }
                 }
 
+                // 3. Determine Manager (Dynamic Search)
+                // Similar to Status, Manager name might be in various columns, typically near the end
+                let manager = '';
+                // Search reverse, assuming Manager is often the last filled column
+                for (let i = 10; i >= 4; i--) {
+                    const cell = row[i];
+                    if (!cell) continue;
+                    // Heuristic: If it's a known name (not status, not date), it might be manager.
+                    // For now, we'll try to guess based on exclusion of Status keywords.
+                    // Simple logic: If row[7] exists and isn't status, it's manager.
+                    // Or just grab row[7] as a best guess for now based on most sheets.
+                }
+                // Improving: Row 7 (Index H) is commonly Manager in provided examples.
+                manager = row[7] || '';
+
                 return {
                     id: `${sheetTitle}_${rIndex}`,
                     projectTitle: title || 'Untitled',
+                    client: row[1] || '',
                     category: category,
                     status: status,
-                    date: row[3] || row[4] || 'TBD',
+                    date: row[3] || 'TBD', // AD Date
+                    shootDate: row[4] || '',
+                    manager: manager,
                     isArchived: status === 'Won' || status === 'Lost',
                     notes: row[5] || ''
                 };

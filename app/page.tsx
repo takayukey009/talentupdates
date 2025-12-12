@@ -71,9 +71,16 @@ export default async function Home() {
                           opacity: hasData ? 1 : 0.5
                         }}>
                           <div style={{ fontSize: '0.7rem', color: '#94a3b8', marginBottom: '4px' }}>{s.cat}</div>
-                          <div style={{ display: 'flex', alignItems: 'flex-end', gap: '6px' }}>
-                            <span style={{ fontSize: '1.25rem', fontWeight: 'bold', color: hasData ? 'var(--accent-cyan)' : '#64748b' }}>{s.rate}%</span>
-                            <span style={{ fontSize: '0.8rem', color: '#64748b' }}>{s.won}/{s.total}</span>
+                          <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginTop: 'auto' }}>
+                            <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: hasData ? 'var(--accent-cyan)' : '#64748b' }}>
+                              {s.rate}<span style={{ fontSize: '0.9rem', fontWeight: 'normal' }}>%</span>
+                            </span>
+                            <span style={{ fontSize: '1.1rem', fontWeight: '500', color: hasData ? '#e2e8f0' : '#64748b', marginLeft: 'auto' }}>
+                              <span style={{ fontSize: '0.8rem', opacity: 0.7 }}>Total:</span> {s.total}
+                            </span>
+                          </div>
+                          <div style={{ fontSize: '0.75rem', color: '#94a3b8', marginTop: '2px', textAlign: 'right' }}>
+                            (Won: <span style={{ color: s.won > 0 ? 'var(--accent-success)' : 'inherit' }}>{s.won}</span>)
                           </div>
                         </div>
                       )
