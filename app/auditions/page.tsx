@@ -30,7 +30,7 @@ export default async function AuditionsPage() {
                 <div className={styles.logo}>GATEタレントAD進捗</div>
                 <nav className={styles.nav}>
                     <Link href="/" className={styles.navItem}>Dashboard</Link>
-                    <div className={styles.navItem}>Talents</div>
+                    <Link href="/talents" className={styles.navItem}>Talents</Link>
                     <div className={`${styles.navItem} ${styles.active}`}>Auditions</div>
                     <div className={styles.navItem}>Settings</div>
                 </nav>

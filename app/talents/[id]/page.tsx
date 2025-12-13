@@ -27,7 +27,7 @@ export default async function TalentDetail({ params }: { params: Promise<{ id: s
                 <div className={styles.logo}>GATEタレントAD進捗</div>
                 <nav className={styles.nav}>
                     <Link href="/" className={styles.navItem}>Dashboard</Link>
-                    <div className={`${styles.navItem} ${styles.active}`}>Talents</div>
+                    <Link href="/talents" className={`${styles.navItem} ${styles.active}`}>Talents</Link>
                     <Link href="/auditions" className={styles.navItem}>Auditions</Link>
                     <div className={styles.navItem}>Settings</div>
                 </nav>

@@ -15,7 +15,7 @@ export default async function Home() {
         <div className={styles.logo}>GATEタレントAD進捗</div>
         <nav className={styles.nav}>
           <div className={`${styles.navItem} ${styles.active}`}>Dashboard</div>
-          <div className={styles.navItem}>Talents</div>
+          <Link href="/talents" className={styles.navItem}>Talents</Link>
           <Link href="/auditions" className={styles.navItem}>Auditions</Link>
           <div className={styles.navItem}>Settings</div>
         </nav>
