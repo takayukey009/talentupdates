@@ -3,6 +3,7 @@ import styles from '../../page.module.css';
 import { getTalentById, getTalents } from '@/lib/data';
 import Link from 'next/link';
 import TalentDetailList from './TalentDetailList';
+import SnsChart from './SnsChart';
 
 export const dynamic = 'force-dynamic';
 
@@ -42,6 +43,10 @@ export default async function TalentDetail({ params }: { params: Promise<{ id: s
 
                 <section>
                     <TalentDetailList talent={talent} />
+                </section>
+
+                <section>
+                    <SnsChart talent={talent} />
                 </section>
             </div>
         </main>

@@ -51,11 +51,41 @@ export async function fetchFromSheetsV2(): Promise<Talent[]> {
         const valueRanges = response.data.valueRanges || [];
         const talents: Talent[] = [];
 
-        // 3. Process each sheet as a Talent
+        // 3. Process sheets to separate SNS data and Talent data
+        const snsMap = new Map<string, any[]>();
+        const talentSheets: { title: string, rows: any[][] }[] = [];
+
         valueRanges.forEach((rangeData, index) => {
             const sheetTitle = sheetTitles[index];
-            const rows = rangeData.values;
+            const rows = rangeData.values || [];
 
+            if (sheetTitle === 'SNS_History') {
+                // Parse SNS History: Date, Name, Insta, TikTok, X
+                // Skip header row
+                rows.slice(1).forEach(row => {
+                    const date = row[0];
+                    const name = row[1];
+                    // Clean numbers (remove commas etc if present)
+                    const cleanNum = (str: string) => parseInt((str || '0').replace(/,/g, ''), 10);
+                    const insta = cleanNum(row[2]);
+                    const tiktok = cleanNum(row[3]);
+                    const x = cleanNum(row[4]);
+
+                    if (name) {
+                        if (!snsMap.has(name)) snsMap.set(name, []);
+                        snsMap.get(name)?.push({ date, instagram: insta, tiktok: tiktok, x: x });
+                    }
+                });
+            } else if (sheetTitle === 'SNS_Config') {
+                // Skip Config sheet
+            } else {
+                // Talent Sheet
+                talentSheets.push({ title: sheetTitle, rows: rows });
+            }
+        });
+
+        // 4. Generate Talent Objects
+        talentSheets.forEach(({ title: sheetTitle, rows }) => {
             if (!rows || rows.length === 0) return;
 
             // DEBUG: Log first row of THIS sheet to check columns
@@ -75,8 +105,6 @@ export async function fetchFromSheetsV2(): Promise<Talent[]> {
                 let category: Category = 'Variety';
 
                 // 1. Determine Category
-                // User requested strict usage of Column C. 
-                // Requested mapping: ドラマ->Drama, 映画->Movie, 広告->Commercial, 舞台->Stage, その他->Other
                 if (colC) {
                     if (colC.includes('映画') || colC.includes('Movie')) category = 'Movie';
                     else if (colC.includes('ドラマ') || colC.includes('Drama')) category = 'Drama';
@@ -86,16 +114,11 @@ export async function fetchFromSheetsV2(): Promise<Talent[]> {
                     else if (colC.includes('イベント') || colC.includes('Event')) category = 'Event';
                     else category = 'Other';
                 } else {
-                    // Fallback if Column C is truly empty, though user said "I adjusted all Column C"
-                    // We'll map to Other or try to guess, but Other is safer given specific instruction
                     category = 'Other';
                 }
 
                 // 2. Determine Status (Dynamic Search)
-                // Columns vary (Status at index 4, 6, or 7). We search for known status keywords.
                 let status: Status = 'Pending';
-                // Search from end to start (columns 8 down to 4) to find status
-                // Common indices: 7 (G or H), 6 (F or G), 4 (E)
                 for (let i = 8; i >= 4; i--) {
                     const cell = row[i];
                     if (!cell) continue;
@@ -107,18 +130,13 @@ export async function fetchFromSheetsV2(): Promise<Talent[]> {
                 }
 
                 // 3. Determine Manager (Dynamic Search)
-                // Similar to Status, Manager name might be in various columns, typically near the end
                 let manager = '';
                 // Search reverse, assuming Manager is often the last filled column
                 for (let i = 10; i >= 4; i--) {
                     const cell = row[i];
                     if (!cell) continue;
-                    // Heuristic: If it's a known name (not status, not date), it might be manager.
-                    // For now, we'll try to guess based on exclusion of Status keywords.
-                    // Simple logic: If row[7] exists and isn't status, it's manager.
-                    // Or just grab row[7] as a best guess for now based on most sheets.
+                    manager = row[7] || ''; // Fallback / default
                 }
-                // Improving: Row 7 (Index H) is commonly Manager in provided examples.
                 manager = row[7] || '';
 
                 return {
@@ -137,11 +155,16 @@ export async function fetchFromSheetsV2(): Promise<Talent[]> {
 
             const id = `t_${sheetTitle}`;
             console.log(`DEBUG: Generating Talent: Name="${sheetTitle}", ID="${id}"`);
+
+            // Attach SNS data
+            const snsData = snsMap.get(sheetTitle) || []; // Matches by Sheet Name (Talent Name)
+
             talents.push({
                 id: id,
                 name: sheetTitle, // Use tab name as Talent Name
                 avatarUrl: '#ccc', // specific avatars could be mapped later
-                auditions: auditions
+                auditions: auditions,
+                sns: snsData
             });
         });
 

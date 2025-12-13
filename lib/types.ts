@@ -15,11 +15,19 @@ export interface Audition {
     isArchived?: boolean;
 }
 
+export interface SNSData {
+    date: string;
+    instagram: number;
+    tiktok: number;
+    x: number;
+}
+
 export interface Talent {
     id: string;
     name: string;
     avatarUrl: string;
     auditions: Audition[];
+    sns?: SNSData[];
 }
 
 export const getStatusColor = (status: Status) => {
