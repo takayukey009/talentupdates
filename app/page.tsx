@@ -12,7 +12,7 @@ export default async function Home() {
   return (
     <main className={styles.main}>
       <aside className={styles.sidebar}>
-        <div className={styles.logo}>STARBOARD</div>
+        <div className={styles.logo}>GATEタレントAD進捗</div>
         <nav className={styles.nav}>
           <div className={`${styles.navItem} ${styles.active}`}>Dashboard</div>
           <div className={styles.navItem}>Talents</div>

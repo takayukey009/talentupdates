@@ -23,7 +23,7 @@ export default async function TalentDetail({ params }: { params: Promise<{ id: s
     return (
         <main className={styles.main}>
             <aside className={styles.sidebar}>
-                <div className={styles.logo}>STARBOARD</div>
+                <div className={styles.logo}>GATEタレントAD進捗</div>
                 <nav className={styles.nav}>
                     <Link href="/" className={styles.navItem}>Dashboard</Link>
                     <div className={`${styles.navItem} ${styles.active}`}>Talents</div>
