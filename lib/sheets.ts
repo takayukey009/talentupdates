@@ -61,8 +61,8 @@ export async function fetchFromSheetsV2(): Promise<Talent[]> {
 
             if (sheetTitle === 'SNS_History') {
                 // Parse SNS History: Date, Name, Insta, TikTok, X
-                // Skip header row
-                rows.slice(1).forEach(row => {
+                // A2:H already skips header, so no slice needed
+                rows.forEach(row => {
                     const date = row[0];
                     const name = row[1];
                     // Clean numbers (remove commas etc if present)
