@@ -391,6 +391,14 @@
         "isArchived": true,
         "notes": ""
       }
+    ],
+    "sns": [
+      {
+        "date": "2025/12/15",
+        "instagram": 206000,
+        "tiktok": 48000,
+        "x": 29000
+      }
     ]
   },
   {
@@ -649,6 +657,14 @@
         "date": "未定",
         "isArchived": false,
         "notes": ""
+      }
+    ],
+    "sns": [
+      {
+        "date": "2025/12/15",
+        "instagram": 170,
+        "tiktok": 5404,
+        "x": 380
       }
     ]
   },
@@ -1169,6 +1185,14 @@
         "date": "未定",
         "isArchived": false,
         "notes": ""
+      }
+    ],
+    "sns": [
+      {
+        "date": "2025/12/15",
+        "instagram": 5600,
+        "tiktok": 22100,
+        "x": 1270
       }
     ]
   }
