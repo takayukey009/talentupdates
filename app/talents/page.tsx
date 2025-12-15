@@ -23,7 +23,7 @@ export default async function TalentsPage() {
 
             <div className={styles.content}>
                 <header className={styles.header}>
-                    <h1 className={styles.pageTitle}>Talents List</h1>
+                    <h1 className={styles.pageTitle}>Talents List <span style={{ fontSize: '0.8rem', opacity: 0.5 }}>(v1.1)</span></h1>
                     <div className={styles.userProfile}>Manager</div>
                 </header>
 
