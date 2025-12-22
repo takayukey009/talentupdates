@@ -13,6 +13,7 @@ export interface Audition {
     manager?: string;
     notes?: string;
     isArchived?: boolean;
+    documentPassed?: boolean;
 }
 
 export interface SNSData {

@@ -42,7 +42,7 @@ export async function fetchFromSheetsV2(): Promise<Talent[]> {
         if (sheetTitles.length === 0) return [];
 
         // 2. Batch fetch all tabs
-        const ranges = sheetTitles.map(title => `${title}!A2:H`);
+        const ranges = sheetTitles.map(title => `${title}!A2:L`);
         const response = await sheets.spreadsheets.values.batchGet({
             spreadsheetId,
             ranges,
@@ -149,6 +149,7 @@ export async function fetchFromSheetsV2(): Promise<Talent[]> {
                     shootDate: row[4] || '',
                     manager: manager,
                     isArchived: status === 'Won' || status === 'Lost',
+                    documentPassed: row[11]?.includes('通過') || false,
                     notes: row[5] || ''
                 };
             });
