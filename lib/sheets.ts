@@ -71,9 +71,10 @@ export async function fetchFromSheetsV2(): Promise<Talent[]> {
                     const tiktok = cleanNum(row[3]);
                     const x = cleanNum(row[4]);
 
-                    if (name) {
-                        if (!snsMap.has(name)) snsMap.set(name, []);
-                        snsMap.get(name)?.push({ date, instagram: insta, tiktok: tiktok, x: x });
+                    if (name && (insta > 0 || tiktok > 0 || x > 0)) {
+                        const trimmedName = name.trim();
+                        if (!snsMap.has(trimmedName)) snsMap.set(trimmedName, []);
+                        snsMap.get(trimmedName)?.push({ date, instagram: insta, tiktok: tiktok, x: x });
                     }
                 });
             } else if (sheetTitle === 'SNS_Config') {
@@ -158,7 +159,7 @@ export async function fetchFromSheetsV2(): Promise<Talent[]> {
             console.log(`DEBUG: Generating Talent: Name="${sheetTitle}", ID="${id}"`);
 
             // Attach SNS data
-            const snsData = snsMap.get(sheetTitle) || []; // Matches by Sheet Name (Talent Name)
+            const snsData = snsMap.get(sheetTitle.trim()) || []; // Matches by Sheet Name (Talent Name)
 
             talents.push({
                 id: id,
