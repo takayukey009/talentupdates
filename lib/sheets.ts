@@ -1,5 +1,5 @@
 import { google } from 'googleapis';
-import { Talent, Status, Category } from './types';
+import { Talent, Status, Category, HighLight } from './types';
 
 // Helper to guess category/status same as our parser
 function guessCategory(title: string): Category {
@@ -18,7 +18,7 @@ function mapStatus(rawStatus: string): Status {
     return 'Pending';
 }
 
-export async function fetchFromSheetsV2(): Promise<Talent[]> {
+export async function fetchFromSheetsV2(): Promise<{ talents: Talent[], highlights: HighLight[] }> {
     try {
         console.log('--- FETCHING FROM SHEETS ---');
         console.log('ID:', process.env.SPREADSHEET_ID ? 'Set' : 'Missing');
@@ -39,7 +39,7 @@ export async function fetchFromSheetsV2(): Promise<Talent[]> {
 
         console.log(`Found ${sheetTitles.length} sheets: ${sheetTitles.join(', ')}`);
 
-        if (sheetTitles.length === 0) return [];
+        if (sheetTitles.length === 0) return { talents: [], highlights: [] };
 
         // 2. Batch fetch all tabs
         const ranges = sheetTitles.map(title => `${title}!A2:L`);
@@ -54,6 +54,7 @@ export async function fetchFromSheetsV2(): Promise<Talent[]> {
         // 3. Process sheets to separate SNS data and Talent data
         const snsMap = new Map<string, any[]>();
         const talentSheets: { title: string, rows: any[][] }[] = [];
+        const highlights: HighLight[] = [];
 
         valueRanges.forEach((rangeData, index) => {
             const sheetTitle = sheetTitles[index];
@@ -79,6 +80,23 @@ export async function fetchFromSheetsV2(): Promise<Talent[]> {
                 });
             } else if (sheetTitle === 'SNS_Config') {
                 // Skip Config sheet
+            } else if (sheetTitle === 'Highlights') {
+                // Parse Highlights: Date, Title, Content, Link
+                rows.forEach((row, rIndex) => {
+                    const date = row[0] || '';
+                    const title = row[1] || '';
+                    const content = row[2] || '';
+                    const link = row[3] || '';
+                    if (title || content) {
+                        highlights.push({
+                            id: `h_${rIndex}`,
+                            date,
+                            title,
+                            content,
+                            link
+                        });
+                    }
+                });
             } else {
                 // Talent Sheet
                 talentSheets.push({ title: sheetTitle, rows: rows });
@@ -170,10 +188,10 @@ export async function fetchFromSheetsV2(): Promise<Talent[]> {
             });
         });
 
-        return talents;
+        return { talents, highlights };
 
     } catch (error) {
         console.error('Sheets Error', error);
-        return [];
+        return { talents: [], highlights: [] };
     }
 }

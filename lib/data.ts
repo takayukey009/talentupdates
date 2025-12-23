@@ -1,7 +1,7 @@
 import { fetchFromSheetsV2 } from './sheets';
 import fs from 'fs';
 import path from 'path';
-import { Talent } from './types';
+import { Talent, HighLight } from './types';
 import dataFromFile from '../data.json';
 import 'server-only'; // Ensure this never bundles to client
 
@@ -26,36 +26,44 @@ function readLocalData(): Talent[] {
 
 export async function getTalents(): Promise<Talent[]> {
     console.log('DEBUG: getTalents called');
-    console.log('DEBUG: SPREADSHEET_ID =', process.env.SPREADSHEET_ID ? 'SET' : 'MISSING');
+    const data = await getDashboardData();
+    return data.talents;
+}
 
-    // If spreadsheet ID is set, try sheets
+export async function getHighlights(): Promise<HighLight[]> {
+    console.log('DEBUG: getHighlights called');
+    const data = await getDashboardData();
+    return data.highlights;
+}
+
+// Internal cache for the request duration (simple singleton-ish for Server Components)
+let cachedData: { talents: Talent[], highlights: HighLight[] } | null = null;
+
+async function getDashboardData(): Promise<{ talents: Talent[], highlights: HighLight[] }> {
+    if (cachedData) return cachedData;
+
     const EXCLUDED_SHEETS = [
-        'ハリセンボン',
-        '近藤春菜',
-        'ベッキー',
-        '宍戸開',
-        '中島健太',
-        'HKT龍頭',
-        'HKT江浦',
-        '宮崎早織',
-        '森カンナ'
+        'ハリセンボン', '近藤春菜', 'ベッキー', '宍戸開', '中島健太', 'HKT龍頭', 'HKT江浦', '宮崎早織', '森カンナ'
     ];
 
-    let allTalents: Talent[] = [];
+    let talents: Talent[] = [];
+    let highlights: HighLight[] = [];
+
     if (process.env.SPREADSHEET_ID) {
         const sheetData = await fetchFromSheetsV2();
-        console.log(`DEBUG: fetchFromSheetsV2 returned ${sheetData.length} talents`);
-        if (sheetData.length > 0) {
-            allTalents = sheetData;
-        } else {
-            console.log('DEBUG: Sheet data empty, using local data');
-            allTalents = readLocalData();
+        talents = sheetData.talents;
+        highlights = sheetData.highlights;
+
+        if (talents.length === 0) {
+            talents = readLocalData();
         }
     } else {
-        allTalents = readLocalData();
+        talents = readLocalData();
     }
 
-    return allTalents.filter(t => !EXCLUDED_SHEETS.includes(t.name));
+    const filteredTalents = talents.filter(t => !EXCLUDED_SHEETS.includes(t.name));
+    cachedData = { talents: filteredTalents, highlights };
+    return cachedData;
 }
 
 export async function getTalentById(id: string): Promise<Talent | undefined> {

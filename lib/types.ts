@@ -23,6 +23,14 @@ export interface SNSData {
     x: number;
 }
 
+export interface HighLight {
+    id: string;
+    date: string;
+    title: string;
+    content: string;
+    link?: string;
+}
+
 export interface Talent {
     id: string;
     name: string;
